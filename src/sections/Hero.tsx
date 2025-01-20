@@ -1,9 +1,5 @@
 "use client";
-import Image from "next/image";
-import ArrowDown from "@/assets/icons/arrow-down.svg";
-import grainImage from "@/assets/images/grain.jpg";
-import StarIcon from "@/assets/icons/star.svg";
-import SparkleIcon from "@/assets/icons/sparkle.svg";
+
 import { motion } from "framer-motion";
 import { LampContainer } from "../components/ui/lamp";
 
