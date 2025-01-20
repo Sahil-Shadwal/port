@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import { AboutSection } from "@/sections/About";
 import { ContactSection } from "@/sections/Contact";
+import { Footer } from "@/sections/Footer";
 // import { Header } from "@/sections/Header";
 import { ProjectsSection } from "@/sections/Projects";
 import { TapeSection } from "@/sections/Tape";
@@ -17,6 +18,8 @@ export default function Home() {
       <TestimonialsSection />
       <AboutSection />
       <ContactSection />
+      <Footer />
+      {/* <TapeSection /> */}
     </div>
   );
 }
