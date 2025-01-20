@@ -31,7 +31,7 @@ const Hero = () => {
           }}
           className="mx-auto max-w-2xl text-center"
         >
-          <p className="text-xl text-slate-300">
+          <p className="text-xl mt-4 text-slate-300">
             Hello there 👋, I&apos;m{" "}
             <span className="text-slate-100 font-semibold">Sahil Shadwal</span>,
             a Full-Stack Developer based in India.
@@ -42,9 +42,17 @@ const Hero = () => {
       <div className="absolute left-0 right-0 bottom-48 z-50">
         <div className="flex items-center justify-center space-x-8 px-4">
           <motion.button
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2, duration: 0.5 }}
+            transition={{
+              delay: 1.2,
+              duration: 1.2,
+              ease: [0.19, 1, 0.22, 1],
+              y: {
+                duration: 1,
+                ease: [0, 0.71, 0.2, 1.01],
+              },
+            }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center gap-2 border border-white/20 bg-white/10 backdrop-blur-md text-white h-12 px-6 rounded-xl hover:bg-white/20 transition-all shadow-lg"
@@ -53,9 +61,17 @@ const Hero = () => {
             <ArrowDown size={20} />
           </motion.button>
           <motion.button
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2, duration: 0.5 }}
+            transition={{
+              delay: 1.4,
+              duration: 1.2,
+              ease: [0.19, 1, 0.22, 1],
+              y: {
+                duration: 1,
+                ease: [0, 0.71, 0.2, 1.01],
+              },
+            }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center gap-2 border border-white/20 
