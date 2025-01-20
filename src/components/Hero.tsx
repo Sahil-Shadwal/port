@@ -83,10 +83,24 @@ const Hero = () => {
             hover:bg-white/10 transition-all shadow-lg"
           >
             <span>👋</span>
-            <span className="font-semibold">Let's Connect</span>
+            <span className="font-semibold"> Reach Out to Me</span>
           </motion.button>
         </div>
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.6, duration: 0.8 }}
+        className="absolute bottom-0 left-[46%] transform -translate-x-[10%] z-50"
+      >
+        <Image
+          src={memojiImage}
+          className="w-[120px] h-[120px]"
+          alt="White Developer behind the laptop"
+          priority
+        />
+      </motion.div>
     </div>
   );
 };
