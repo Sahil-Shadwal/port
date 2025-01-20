@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import { AboutSection } from "@/sections/About";
 // import { Header } from "@/sections/Header";
 import { ProjectsSection } from "@/sections/Projects";
 import { TapeSection } from "@/sections/Tape";
@@ -13,6 +14,7 @@ export default function Home() {
       <ProjectsSection />
       <TapeSection />
       <TestimonialsSection />
+      <AboutSection />
     </div>
   );
 }
