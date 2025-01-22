@@ -1,10 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { LampContainer } from "../components/ui/lamp";
 import { ArrowDown } from "lucide-react";
-import Image from "next/image";
-import memojiImage from "@/assets/images/memoji-computer.png";
 import { HeroHighlight, Highlight } from "./ui/hero-highlight";
 
 const Hero = () => {
