@@ -59,7 +59,7 @@ export const ProjectsSection = () => {
           <div className="text-sm font-medium">Available for new projects</div>
         </div>
       </div> */}
-      <section className="pb-16 lg:py-24">
+      <section id="projects" className="pb-16 lg:py-24">
         <div>
           <div className="container">
             <SectionHeader
