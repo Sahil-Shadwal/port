@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Sahil Shadwal",
-  description: "Portfolio of Sahil Shadwal",
+  title: "Sahil Shadwal",
+  description: "Portfolio",
 };
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="bg-[#F5EFFF]">{children}</div>
       </body>
     </html>
   );

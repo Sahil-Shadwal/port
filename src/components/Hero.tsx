@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import localFont from "next/font/local";
 import { ArrowDown } from "lucide-react";
-import { HeroHighlight, Highlight } from "./ui/hero-highlight";
+import { HeroHighlight } from "./ui/hero-highlight";
 import wolfSvg from "../assets/images/image.svg";
 import { Space_Grotesk } from "next/font/google";
 
@@ -22,7 +22,7 @@ const Hero = () => {
   };
   return (
     <div>
-      <HeroHighlight className="h-screen">
+      <HeroHighlight>
         <div
           className="absolute inset-0 z-5 opacity-90 "
           style={{
@@ -70,7 +70,7 @@ const Hero = () => {
                 <p className="text-lg md:text-xl text-slate-600">
                   Hello there 👋, I&apos;m{" "}
                   <span className="text-slate-900 font-semibold">
-                    <Highlight>Sahil Shadwal</Highlight>
+                    Sahil Shadwal
                   </span>
                   , a Full-Stack Developer based in India.
                 </p>
@@ -83,18 +83,22 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
-                  delay: 1.2,
+                  delay: 1.4,
                   duration: 1.2,
                   ease: [0.19, 1, 0.22, 1],
                 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 
-              border border-slate-200 bg-slate-900 text-white 
-              h-12 px-8 rounded-xl hover:bg-slate-800 transition-all shadow-lg"
+                className="inline-flex h-12 animate-shimmer items-center justify-center 
+    rounded-md border border-slate-200 
+    bg-[linear-gradient(110deg,#ffffff,45%,#f1f5f9,55%,#ffffff)] 
+    bg-[length:200%_100%] px-6 font-medium text-slate-800 
+    transition-colors focus:outline-none focus:ring-2 
+    focus:ring-slate-200 focus:ring-offset-2 focus:ring-offset-slate-50"
               >
+                <span></span>
                 <a onClick={scrollToProjects} className="font-semibold">
-                  Explore My Work
+                  Explore my work
                 </a>
                 <ArrowDown size={20} />
               </motion.button>
@@ -109,13 +113,15 @@ const Hero = () => {
                 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 
-              border border-slate-200 bg-gradient-to-b from-teal-600 to-teal-700 
-              text-white h-12 px-8 rounded-xl 
-              hover:from-teal-700 hover:to-teal-800 transition-all shadow-lg"
+                className="inline-flex h-12 animate-shimmer items-center justify-center 
+    rounded-md border border-slate-800 
+    bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] 
+    bg-[length:200%_100%] px-6 font-medium text-slate-400 
+    transition-colors focus:outline-none focus:ring-2 
+    focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
               >
                 <span>👋</span>
-                <span className="font-semibold">Reach Out to Me</span>
+                <a className="font-semibold">Reach Out to Me</a>
               </motion.button>
             </div>
           </div>
