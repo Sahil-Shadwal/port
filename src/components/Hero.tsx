@@ -1,10 +1,20 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import localFont from "next/font/local";
 import { ArrowDown } from "lucide-react";
 import { HeroHighlight, Highlight } from "./ui/hero-highlight";
 import wolfSvg from "../assets/images/image.svg";
+import { Space_Grotesk } from "next/font/google";
 
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["500"],
+});
+const paintBrush = localFont({
+  src: "../assets/font/BkrHardbrush-MAr2v.ttf",
+  display: "swap",
+});
 const Hero = () => {
   const scrollToProjects = () => {
     const projectsSection = document.getElementById("projects");
@@ -35,15 +45,16 @@ const Hero = () => {
                   duration: 0.8,
                   ease: "easeInOut",
                 }}
-                className="bg-gradient-to-br from-purple-600 to-purple-900 py-4 bg-clip-text 
-              text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight text-transparent 
-              leading-tight md:leading-tight lg:leading-tight px-4"
+                className={`${paintBrush.className} bg-gradient-to-br from-gray-300 to-gray-100 py-4 bg-clip-text 
+                text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight text-transparent 
+                leading-tight md:leading-tight lg:leading-tight px-4`}
               >
-                {/* <Highlight> */}
-                Turning ideas into
+                Turning<span className={spaceGrotesk.className}> </span>ideas
+                <span className={spaceGrotesk.className}> </span>
+                into
                 <br className="hidden md:block" />
-                seamless Experiences
-                {/* </Highlight> */}
+                seamless<span className={spaceGrotesk.className}> </span>
+                Experiences
               </motion.h1>
 
               <motion.div
