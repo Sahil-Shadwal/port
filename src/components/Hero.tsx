@@ -4,18 +4,7 @@ import { motion } from "framer-motion";
 import localFont from "next/font/local";
 import { ArrowDown } from "lucide-react";
 import { HeroHighlight } from "./ui/hero-highlight";
-import wolfSvg from "../assets/images/image.svg";
-import { Space_Grotesk } from "next/font/google";
-import Image from "next/image";
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["500"],
-});
-const paintBrush = localFont({
-  src: "../assets/font/BkrHardbrush-MAr2v.ttf",
-  display: "swap",
-});
 const mymy = localFont({
   src: "../assets/font/morse-cyeon.otf",
   display: "swap",
