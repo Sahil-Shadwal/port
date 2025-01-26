@@ -6,6 +6,7 @@ import { ArrowDown } from "lucide-react";
 import { HeroHighlight } from "./ui/hero-highlight";
 import wolfSvg from "../assets/images/image.svg";
 import { Space_Grotesk } from "next/font/google";
+import Image from "next/image";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -15,6 +16,14 @@ const paintBrush = localFont({
   src: "../assets/font/BkrHardbrush-MAr2v.ttf",
   display: "swap",
 });
+const mymy = localFont({
+  src: "../assets/font/morse-cyeon.otf",
+  display: "swap",
+});
+const shadwal = localFont({
+  src: "../assets/font/Amarante-Regular.ttf",
+  display: "swap",
+});
 const Hero = () => {
   const scrollToProjects = () => {
     const projectsSection = document.getElementById("projects");
@@ -22,20 +31,10 @@ const Hero = () => {
   };
   return (
     <div>
-      <HeroHighlight>
-        <div
-          className="absolute inset-0 z-5 opacity-90 "
-          style={{
-            backgroundImage: `url(${wolfSvg.src})`,
-            backgroundPosition: "center",
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-          }}
-        />
+      <HeroHighlight className="h-screen">
+        {" "}
         <section className="min-h-screen relative flex flex-col items-center justify-center px-4 py-20 md:py-32 overflow-hidden">
-          {/* Main Content Container */}
           <div className="container mx-auto max-w-7xl">
-            {/* Hero Text */}
             <div className="text-center space-y-8 md:space-y-12 mb-16 md:mb-24">
               <motion.h1
                 initial={{ opacity: 0.5, y: 100 }}
@@ -45,16 +44,11 @@ const Hero = () => {
                   duration: 0.8,
                   ease: "easeInOut",
                 }}
-                className={`${paintBrush.className} bg-gradient-to-br from-gray-300 to-gray-100 py-4 bg-clip-text 
-                text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight text-transparent 
+                className={`${mymy.className} bg-gradient-to-br from-gray-300 to-gray-100 py-4 bg-clip-text 
+                text-5xl md:text-7xl lg:text-9xl font-medium tracking-tight text-transparent 
                 leading-tight md:leading-tight lg:leading-tight px-4`}
               >
-                Turning<span className={spaceGrotesk.className}> </span>ideas
-                <span className={spaceGrotesk.className}> </span>
-                into
-                <br className="hidden md:block" />
-                seamless<span className={spaceGrotesk.className}> </span>
-                Experiences
+                <span className="text-white ">SHADWAL</span>
               </motion.h1>
 
               <motion.div
@@ -67,9 +61,11 @@ const Hero = () => {
                 }}
                 className="max-w-2xl mx-auto px-4"
               >
-                <p className="text-lg md:text-xl text-slate-600">
+                <p
+                  className={`${shadwal.className} text-lg md:text-xl text-slate-300`}
+                >
                   Hello there 👋, I&apos;m{" "}
-                  <span className="text-slate-900 font-semibold">
+                  <span className="text-slate-700 font-semibold">
                     Sahil Shadwal
                   </span>
                   , a Full-Stack Developer based in India.
@@ -125,21 +121,6 @@ const Hero = () => {
               </motion.button>
             </div>
           </div>
-
-          {/* Memoji Image */}
-          {/* <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.6, duration: 0.8 }}
-          className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 z-50"
-        >
-          <Image
-            src={memojiImage}
-            className="w-[120px] h-[120px] md:w-[160px] md:h-[160px]"
-            alt="White Developer behind the laptop"
-            priority
-          />
-        </motion.div> */}
         </section>
       </HeroHighlight>
     </div>
